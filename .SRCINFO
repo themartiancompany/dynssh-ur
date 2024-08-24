@@ -1,6 +1,6 @@
 pkgbase = dynssh
 	pkgdesc = Small SSH wrapper
-	pkgver = 1.1.4.1.1
+	pkgver = 1.1.5.1.1
 	pkgrel = 1
 	url = https://github.com/themartiancompany/dynssh
 	arch = any
@@ -9,7 +9,11 @@ pkgbase = dynssh
 	checkdepends = shellcheck
 	depends = openssh
 	depends = net-tools
-	source = dynssh-1.1.4.1.1.tar.gz::https://github.com/themartiancompany/dynssh/archive/refs/tags/1.1.4.1.1.tar.gz
-	sha256sums = 4a13daeec0b6370969a87a37512441d1cd6185c5e563a4557a47cf62b1abe7e5
+	optdepends = autossh: to reconnect in simple network drop cases
+	optdepends = rsync: for efficient file transfer
+	optdepends = tor: to connect to hidden services hosts
+	source = dynssh-1c198cc191d77359600e4475ec97abe6a727a68a.zip::https://github.com/themartiancompany/dynssh/archive/1c198cc191d77359600e4475ec97abe6a727a68a.zip
+	validpgpkeys = 97E989E6CF1D2C7F7A41FF9F95684DBE23D6A3E9
+	sha256sums = ac295bacf86f5da131f2add29e049c8286e4eb1d4d19a5a4b6101a5f6da33cef
 
 pkgname = dynssh
