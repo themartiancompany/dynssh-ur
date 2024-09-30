@@ -6,7 +6,8 @@
 _offline="false"
 _git='false'
 _proj="hip"
-pkgname=dynssh
+_pkg="ssh"
+pkgname="dyn${_pkg}"
 pkgver=1.1.5.1.1
 _commit="1c198cc191d77359600e4475ec97abe6a727a68a"
 pkgrel=1
@@ -18,16 +19,21 @@ _host='https://github.com'
 _ns='themartiancompany'
 url="${_host}/${_ns}/${pkgname}"
 license=(
-  AGPL3)
+  AGPL3
+)
 depends=(
-  openssh
-  net-tools
+  "hotspot-resolver"
+  "libcrash-bash"
+  "net-tools"
+  "open${_pkg}"
+  "${_pkg}-utils"
+  "unused-local-port"
 )
 makedepends=( 
 )
 optdepends=(
   'autossh: to reconnect in simple network drop cases'
-  'rsync: for efficient file transfer'
+  'dynrsync: for efficient file transfer'
   'tor: to connect to hidden services hosts'
 )
 groups=(
